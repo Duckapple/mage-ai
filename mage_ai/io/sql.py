@@ -216,7 +216,6 @@ class BaseSQL(BaseSQLConnection):
         allow_reserved_words: bool = False,
         unique_conflict_method: str = None,
         unique_constraints: List[str] = None,
-        perform_lower_casing: bool = True,
         **kwargs,
     ) -> None:
         """
@@ -338,7 +337,6 @@ class BaseSQL(BaseSQLConnection):
                         allow_reserved_words=allow_reserved_words,
                         unique_conflict_method=unique_conflict_method,
                         unique_constraints=unique_constraints,
-                        perform_lower_casing=perform_lower_casing,
                         **kwargs,
                     )
             self.conn.commit()
